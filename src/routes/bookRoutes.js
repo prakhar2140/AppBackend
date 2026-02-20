@@ -52,7 +52,7 @@ router.get("/", protectRoute, async (req, res) => {
 
     const totalBooks = await Book.countDocuments();
 
-    res.send({
+    res.json({
       books,
       currentPage: page,
       totalBooks,
